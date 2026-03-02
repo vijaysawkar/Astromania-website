@@ -1,73 +1,243 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Astronomia - Astrology & Kundali Services</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0f2b;
-      color: white;
-      text-align: center;
-    }
-    header {
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #1a1f4d, #2e3a87);
-    }
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 18px;
-      color: #ddd;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #f5b342;
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-    section {
-      padding: 40px 20px;
-    }
-    footer {
-      background: #111;
-      padding: 20px;
-      font-size: 14px;
-      color: #aaa;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astro-Vastu Knowledge</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0b0f1a;
+  --card:#111827;
+  --gold:#d4af37;
+  --text:#ffffff;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+}
+
+header{
+  background:#000;
+  padding:15px 30px;
+  position:sticky;
+  top:0;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+nav img{
+  height:60px;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:20px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#fff;
+  font-size:14px;
+}
+
+nav a:hover{
+  color:var(--gold);
+}
+
+section{
+  padding:70px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+h1,h2{
+  font-family:'Playfair Display',serif;
+  color:var(--gold);
+  text-align:center;
+}
+
+.hero{
+  text-align:center;
+}
+
+.hero h1{
+  font-size:42px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 28px;
+  background:var(--gold);
+  color:#000;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  margin-top:20px;
+}
+
+.card{
+  background:var(--card);
+  padding:25px;
+  border-radius:12px;
+  margin:15px 0;
+  border:1px solid rgba(212,175,55,0.3);
+}
+
+.grid{
+  display:grid;
+  gap:20px;
+}
+
+.grid-3{
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
+.gallery img{
+  width:100%;
+  border-radius:10px;
+  border:2px solid var(--gold);
+}
+
+footer{
+  background:#000;
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  background:#1f2937;
+  border:none;
+  color:#fff;
+  border-radius:6px;
+}
+
+@media(max-width:768px){
+  nav ul{
+    flex-direction:column;
+    gap:10px;
+  }
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Astronomia</h1>
-  <p>Professional Astrology & Kundali Consultation</p>
-  <a href="#contact" class="btn">Book Consultation</a>
+<nav>
+<img src="logo.png" alt="Astro-Vastu Logo">
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#book">Book</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 </header>
 
-<section>
-  <h2>Our Services</h2>
-  <p>✔ Kundali Reading</p>
-  <p>✔ Vastu Consultation</p>
-  <p>✔ Horoscope Analysis</p>
-  <p>✔ Marriage Matching</p>
+<!-- HOME -->
+<section id="home" class="hero">
+<h1>Vijay Ramdas Sawkar</h1>
+<p>Sacred Sciences for Modern Life</p>
+<a href="#book" class="btn">Book Consultation</a>
 </section>
 
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
+<div class="grid grid-3">
+<div class="card">Vedic Astrology</div>
+<div class="card">Vastu Shastra</div>
+<div class="card">Gemstone Therapy</div>
+<div class="card">Muhurta</div>
+<div class="card">Kundali Matching</div>
+<div class="card">New Kundali</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<h2>Our Certifications</h2>
+<div class="grid grid-3 gallery">
+<img src="cert1.jpg" alt="Astrology Certificate">
+<img src="cert2.jpg" alt="Vastu Certificate">
+</div>
+</section>
+
+<!-- BOOK -->
+<section id="book">
+<h2>Schedule Your Session</h2>
+<form>
+<input type="text" placeholder="Full Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<input type="email" placeholder="Email Address" required>
+
+<select required>
+<option value="">Select Consultation Type</option>
+<option>Vedic Astrology</option>
+<option>Vastu Shastra</option>
+<option>Gemstone Therapy</option>
+<option>Kundali Matching</option>
+</select>
+
+<select required>
+<option value="">Mode</option>
+<option>Online</option>
+<option>In-Person</option>
+</select>
+
+<textarea rows="4" placeholder="Additional Message"></textarea>
+
+<button class="btn">Submit Booking Request</button>
+</form>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: your@email.com</p>
-  <p>Phone: +91-XXXXXXXXXX</p>
+<h2>Get in Touch</h2>
+
+<div class="card">
+<p><strong>Phone:</strong> +91 98504 54549</p>
+</div>
+
+<div class="card">
+<p><strong>Email:</strong> sawkarv15@gmail.com</p>
+</div>
+
+<div class="card">
+<p><strong>Office Address:</strong><br>
+<a href="https://maps.app.goo.gl/i32yhyBr9B47Sg9T7?g_st=aw" 
+target="_blank" 
+style="color:#d4af37; text-decoration:none;">
+Margao, Goa, India (Click to Open in Google Maps)
+</a>
+</p>
+</div>
+
 </section>
 
 <footer>
-  © 2026 Astronomia. All rights reserved.
+© 2026 Astro-Vastu Knowledge | All Rights Reserved
 </footer>
 
 </body>
