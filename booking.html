@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Book Consultation | Astronomia</title>
 
-<link rel="stylesheet" href="style.css">
-
 <style>
 body{
 background:#0c0c12;
@@ -70,48 +68,52 @@ background:#b8962f;
 <body>
 
 <div class="form-box">
-
 <h2>Book Your Consultation</h2>
 
-<form id="bookingForm" action="https://formsubmit.co/sawkarv15@gmail.com" method="POST">
-
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="New Consultation Booking - Astronomia">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_autoresponse" 
-value="Thank you for booking your consultation with Astronomia. 
-
-We have received your request successfully.
-
-To confirm your session, please send 'Booked' on our WhatsApp number.
-
-We will contact you shortly.
-
-- Astronomia by Vijay Sawkar">
-
-<input type="hidden" name="_replyto" value="email">
+<form id="bookingForm">
 
 <input type="text" name="Name" placeholder="Full Name" required>
 <input type="tel" name="Phone" placeholder="Phone Number" required>
 <input type="email" name="email" placeholder="Email Address" required>
-<input type="date" name="Birth Date" required>
-<input type="time" name="Birth Time" required>
-<input type="text" name="Birth Place" placeholder="Birth Place" required>
+<input type="text" name="service" placeholder="Service Required" required>
 <textarea name="Concern" placeholder="Describe Your Concern"></textarea>
 
 <button type="submit" class="submit-btn">Submit Booking</button>
 
 </form>
-
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 <script>
-document.getElementById("bookingForm").addEventListener("submit", function(){
+(function(){
+emailjs.init("vWUKW_m2GBVlS2yGo");
+})();
 
-setTimeout(function(){
-window.location.href = "https://wa.me/919850454549?text=Hello%20Astronomia,%20I%20have%20submitted%20my%20booking%20form.%20Please%20confirm%20my%20consultation.";
-}, 1500);
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+e.preventDefault();
 
+var form = this;
+
+emailjs.send("service_698j2qc","template_bdfz1nc",{
+name: form.Name.value,
+email: form.email.value,
+phone: form.Phone.value,
+service: form.service.value,
+message: form.Concern.value
+})
+.then(function(){
+
+alert("Booking submitted successfully. Please check your email.");
+
+// Redirect to WhatsApp
+window.location.href = "https://wa.me/919850454549?text=Hello%20Astronomia,%20I%20have%20submitted%20a%20booking%20request.";
+
+form.reset();
+
+}, function(error){
+alert("Failed to send booking. Please try again.");
+});
 });
 </script>
 
