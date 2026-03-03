@@ -1,76 +1,180 @@
-body{
-    margin:0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background:#070d1f;
-    color:#e4e4e4;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-/* HEADER */
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(180deg,#071021,#020814);
+color:#e6e6e6;
+}
+
 header{
-    background:#050a17;
-    padding:20px 60px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid #1a2238;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+z-index:1000;
+border-bottom:1px solid rgba(212,175,55,0.2);
 }
 
 .logo{
-    color:#d4af37;
-    font-size:22px;
-    font-weight:bold;
-    letter-spacing:1px;
+font-family:'Playfair Display',serif;
+font-size:22px;
+font-weight:700;
+background:linear-gradient(90deg,#d4af37,#f5d76e);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 nav a{
-    color:#cccccc;
-    margin-left:25px;
-    text-decoration:none;
-    font-size:15px;
+color:#ccc;
+text-decoration:none;
+margin-left:25px;
+font-size:14px;
+letter-spacing:1px;
+transition:0.3s;
 }
 
 nav a:hover{
-    color:#d4af37;
+color:#d4af37;
 }
 
-/* MAIN SECTION */
 .section{
-    padding:80px 60px;
-    max-width:1100px;
-    margin:auto;
+padding:100px 20px;
+max-width:1100px;
+margin:auto;
+text-align:center;
 }
 
 h1{
-    color:#d4af37;
-    font-size:36px;
+font-family:'Playfair Display',serif;
+font-size:42px;
+margin-bottom:20px;
+background:linear-gradient(90deg,#d4af37,#f5d76e);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 h2{
-    color:#d4af37;
-    margin-top:40px;
+font-family:'Playfair Display',serif;
+font-size:28px;
+margin-bottom:40px;
+color:#d4af37;
+}
+
+.subtitle{
+color:#aaa;
+max-width:700px;
+margin:auto;
+margin-bottom:40px;
+line-height:1.6;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
 
 .card{
-    background:#0c1428;
-    padding:25px;
-    border:1px solid #1d2742;
-    margin-bottom:25px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(212,175,55,0.2);
+border-radius:20px;
+padding:30px;
+text-align:left;
+transition:0.4s;
+}
+
+.card:hover{
+border:1px solid #d4af37;
+transform:translateY(-5px);
+box-shadow:0 0 25px rgba(212,175,55,0.2);
+}
+
+.card i{
+font-size:28px;
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+font-family:'Playfair Display',serif;
+color:#fff;
+}
+
+.card p{
+font-size:14px;
+color:#aaa;
+line-height:1.6;
 }
 
 .button{
-    background:#d4af37;
-    color:#000;
-    padding:12px 25px;
-    text-decoration:none;
-    display:inline-block;
-    margin-top:15px;
-    font-weight:bold;
+display:inline-block;
+margin-top:30px;
+background:linear-gradient(90deg,#d4af37,#f5d76e);
+color:#000;
+padding:14px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
 }
 
-/* FOOTER */
+.button:hover{
+transform:scale(1.05);
+}
+
 .footer{
-    background:#050a17;
-    padding:40px 60px;
-    border-top:1px solid #1a2238;
-    margin-top:80px;
+background:#050b18;
+padding:60px 20px;
+text-align:center;
+border-top:1px solid rgba(212,175,55,0.2);
+}
+
+.footer p{
+color:#888;
+font-size:14px;
+margin:8px 0;
+}
+
+.footer a{
+color:#d4af37;
+text-decoration:none;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+}
+
+form input, form select, form textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(212,175,55,0.2);
+border-radius:10px;
+color:white;
+}
+
+form input:focus, form select:focus, form textarea:focus{
+outline:none;
+border:1px solid #d4af37;
 }
