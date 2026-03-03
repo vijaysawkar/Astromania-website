@@ -1,0 +1,76 @@
+body{
+    margin:0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background:#070d1f;
+    color:#e4e4e4;
+}
+
+/* HEADER */
+header{
+    background:#050a17;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #1a2238;
+}
+
+.logo{
+    color:#d4af37;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:#cccccc;
+    margin-left:25px;
+    text-decoration:none;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+/* MAIN SECTION */
+.section{
+    padding:80px 60px;
+    max-width:1100px;
+    margin:auto;
+}
+
+h1{
+    color:#d4af37;
+    font-size:36px;
+}
+
+h2{
+    color:#d4af37;
+    margin-top:40px;
+}
+
+.card{
+    background:#0c1428;
+    padding:25px;
+    border:1px solid #1d2742;
+    margin-bottom:25px;
+}
+
+.button{
+    background:#d4af37;
+    color:#000;
+    padding:12px 25px;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+.footer{
+    background:#050a17;
+    padding:40px 60px;
+    border-top:1px solid #1a2238;
+    margin-top:80px;
+}
