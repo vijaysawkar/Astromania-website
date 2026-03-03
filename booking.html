@@ -13,8 +13,8 @@ font-family: 'Segoe UI', sans-serif;
 }
 
 .form-box{
-max-width:650px;
-margin:120px auto;
+max-width:700px;
+margin:100px auto;
 padding:50px;
 background:#111117;
 border-radius:18px;
@@ -30,18 +30,20 @@ letter-spacing:2px;
 }
 
 .form-box input,
+.form-box select,
 .form-box textarea{
 width:100%;
-padding:15px;
-margin-bottom:20px;
+padding:14px;
+margin-bottom:18px;
 background:#0b0b0f;
 border:1px solid rgba(212,175,55,0.2);
 border-radius:10px;
 color:white;
-font-size:15px;
+font-size:14px;
 }
 
 .form-box input:focus,
+.form-box select:focus,
 .form-box textarea:focus{
 outline:none;
 border:1px solid #d4af37;
@@ -72,50 +74,38 @@ background:#b8962f;
 
 <form id="bookingForm">
 
-<input type="text" name="Name" placeholder="Full Name" required>
-<input type="tel" name="Phone" placeholder="Phone Number" required>
+<input type="text" name="name" placeholder="Full Name" required>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
 <input type="email" name="email" placeholder="Email Address" required>
-<input type="text" name="service" placeholder="Service Required" required>
-<textarea name="Concern" placeholder="Describe Your Concern"></textarea>
+
+<label>Date of Birth</label>
+<input type="date" name="dob" required>
+
+<label>Time of Birth</label>
+<input type="time" name="tob" required>
+
+<input type="text" name="place" placeholder="Place of Birth" required>
+
+<label>Type of Consultation</label>
+<select name="service" required>
+<option value="">Select Service</option>
+<option>Astrology Consultation</option>
+<option>Vastu Consultation (Home)</option>
+<option>Vastu Consultation (Plot)</option>
+<option>Industrial Vastu Visit</option>
+<option>New Kundali Creation</option>
+<option>Gemstone Recommendation</option>
+<option>Gemstone Purchase Consultation</option>
+</select>
+
+<textarea name="message" placeholder="Describe Your Concern"></textarea>
 
 <button type="submit" class="submit-btn">Submit Booking</button>
 
 </form>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-<script>
-(function(){
-emailjs.init("vWUKW_m2GBVlS2yGo");
-})();
-
-document.getElementById("bookingForm").addEventListener("submit", function(e){
-e.preventDefault();
-
-var form = this;
-
-emailjs.send("service_698j2qc","template_bdfz1nc",{
-name: form.Name.value,
-email: form.email.value,
-phone: form.Phone.value,
-service: form.service.value,
-message: form.Concern.value
-})
-.then(function(){
-
-alert("Booking submitted successfully. Please check your email.");
-
-// Redirect to WhatsApp
-window.location.href = "https://wa.me/919850454549?text=Hello%20Astronomia,%20I%20have%20submitted%20a%20booking%20request.";
-
-form.reset();
-
-}, function(error){
-alert("Failed to send booking. Please try again.");
-});
-});
-</script>
 
 </body>
 </html>
