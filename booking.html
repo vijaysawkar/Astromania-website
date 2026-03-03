@@ -8,11 +8,57 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<style>
+.form-container {
+max-width:600px;
+margin:140px auto 100px auto;
+background:#111117;
+padding:40px;
+border-radius:15px;
+border:1px solid rgba(212,175,55,0.2);
+box-shadow:0 15px 40px rgba(212,175,55,0.15);
+}
+
+.form-container h2 {
+text-align:center;
+color:#d4af37;
+margin-bottom:30px;
+letter-spacing:2px;
+}
+
+.form-container input,
+.form-container textarea {
+width:100%;
+padding:14px;
+margin-bottom:20px;
+background:#0b0b0f;
+border:1px solid rgba(212,175,55,0.2);
+border-radius:8px;
+color:white;
+font-family:inherit;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+outline:none;
+border:1px solid #d4af37;
+}
+
+.form-container button {
+width:100%;
+}
+</style>
+
 </head>
+
 <body>
 
 <header>
+<div style="display:flex;align-items:center;gap:15px;">
+<img src="Screenshot_20260226_164340.jpg" style="height:50px;border-radius:8px;">
 <div class="logo">Astronomia</div>
+</div>
+
 <nav>
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
@@ -22,86 +68,39 @@
 </nav>
 </header>
 
-<section class="section">
 
-<h1>Book Your Consultation</h1>
+<div class="form-container">
 
-<p class="subtitle">
-Confidential and personalized astrology consultation.
-Fill in your details below and we will contact you shortly.
-</p>
-
-<div class="card" style="max-width:600px;margin:auto;">
+<h2>Book Consultation</h2>
 
 <form action="https://formsubmit.co/sawkarv15@gmail.com" method="POST">
 
-<input type="text" name="Name" placeholder="Full Name" required>
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="New Consultation Booking - Astronomia">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://vijaysawkar.github.io/Astromania-website/thankyou.html">
 
+<input type="hidden" name="_autoresponse" 
+value="Thank you for booking consultation with Astronomia. Your request has been received successfully. We will contact you shortly to confirm your session. – Astronomia by Vijay Sawkar">
+
+<input type="text" name="Full Name" placeholder="Full Name" required>
+<input type="tel" name="Phone Number" placeholder="Phone Number" required>
 <input type="email" name="Email" placeholder="Email Address" required>
+<input type="date" name="Birth Date" required>
+<input type="time" name="Birth Time" required>
+<input type="text" name="Birth Place" placeholder="Birth Place" required>
+<textarea name="Concern" placeholder="Describe Your Concern"></textarea>
 
-<input type="tel" name="Phone" placeholder="Phone Number" required>
-
-<select name="Service" required>
-<option value="">Select Service</option>
-<option>Kundali Reading</option>
-<option>Gemstone Consultation</option>
-<option>Vastu Shastra</option>
-<option>Kundali Matching</option>
-<option>Muhurta</option>
-</select>
-
-<textarea name="Message" rows="4" placeholder="Write your query..."></textarea>
-
-<button type="submit" class="button" style="width:100%;">Submit Booking</button>
+<button type="submit" class="button">Submit Booking</button>
 
 </form>
 
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>Consultation Process</h2>
-
-<div class="grid">
-
-<div class="card">
-<i class="fas fa-file-alt"></i>
-<h3>Submit Details</h3>
-<p>Provide your birth details and consultation request securely.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-phone"></i>
-<h3>We Contact You</h3>
-<p>Our team connects with you to confirm appointment timing.</p>
-</div>
-
-<div class="card">
-<i class="fas fa-star"></i>
-<h3>Detailed Guidance</h3>
-<p>Receive precise remedies and astrological direction.</p>
-</div>
-
-</div>
-
-</section>
-
-<footer class="footer">
-
-<p style="font-size:18px;">Astronomia by Vijay Sawkar</p>
-<p>Email: sawkarv15@gmail.com</p>
-<p>Phone: +91 9850454549</p>
-
-<p>
-<a href="https://www.instagram.com/sawkar.v" target="_blank">Instagram</a> |
-<a href="https://www.facebook.com/" target="_blank">Facebook</a>
+<p style="text-align:center;margin-top:20px;color:#aaa;font-size:14px;">
+After submitting, please send <b>"Booked"</b> on WhatsApp to confirm your session.
 </p>
 
-<p style="margin-top:20px;">© 2026 Astronomia. All Rights Reserved.</p>
+</div>
 
-</footer>
 
 <a href="https://wa.me/919850454549" target="_blank" class="whatsapp-float">
 <i class="fab fa-whatsapp"></i>
