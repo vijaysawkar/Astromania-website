@@ -26,7 +26,6 @@ box-shadow:0 20px 60px rgba(212,175,55,0.15);
 text-align:center;
 color:#d4af37;
 margin-bottom:40px;
-letter-spacing:2px;
 }
 
 .form-box input,
@@ -42,13 +41,6 @@ color:white;
 font-size:14px;
 }
 
-.form-box input:focus,
-.form-box select:focus,
-.form-box textarea:focus{
-outline:none;
-border:1px solid #d4af37;
-}
-
 .submit-btn{
 width:100%;
 padding:15px;
@@ -58,11 +50,6 @@ font-weight:bold;
 border:none;
 border-radius:10px;
 cursor:pointer;
-transition:0.3s;
-}
-
-.submit-btn:hover{
-background:#b8962f;
 }
 </style>
 </head>
@@ -105,7 +92,7 @@ background:#b8962f;
 </form>
 </div>
 
-<!-- EMAILJS SCRIPT -->
+<!-- EmailJS -->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <script>
@@ -123,7 +110,7 @@ name: form.name.value,
 email: form.email.value,
 phone: form.phone.value,
 service: form.service.value,
-message: 
+message:
 "Date of Birth: " + form.dob.value + "\n" +
 "Time of Birth: " + form.tob.value + "\n" +
 "Place of Birth: " + form.place.value + "\n\n" +
@@ -132,8 +119,9 @@ message:
 .then(function(){
 alert("Booking submitted successfully. We will contact you shortly.");
 form.reset();
-}, function(error){
-alert("Something went wrong. Please try again.");
+})
+.catch(function(error){
+alert("Error sending booking. Please try again.");
 });
 });
 </script>
