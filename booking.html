@@ -9,7 +9,7 @@
 body{
 background:#0c0c12;
 color:white;
-font-family: 'Segoe UI', sans-serif;
+font-family:'Segoe UI',sans-serif;
 }
 
 .form-box{
@@ -75,9 +75,7 @@ background:#b8962f;
 <form id="bookingForm">
 
 <input type="text" name="name" placeholder="Full Name" required>
-
 <input type="tel" name="phone" placeholder="Phone Number" required>
-
 <input type="email" name="email" placeholder="Email Address" required>
 
 <label>Date of Birth</label>
@@ -106,6 +104,39 @@ background:#b8962f;
 
 </form>
 </div>
+
+<!-- EMAILJS SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("vWUKW_m2GBVlS2yGo");
+})();
+
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+var form = this;
+
+emailjs.send("service_698j2qc","template_bdfz1nc",{
+name: form.name.value,
+email: form.email.value,
+phone: form.phone.value,
+service: form.service.value,
+message: 
+"Date of Birth: " + form.dob.value + "\n" +
+"Time of Birth: " + form.tob.value + "\n" +
+"Place of Birth: " + form.place.value + "\n\n" +
+"Concern:\n" + form.message.value
+})
+.then(function(){
+alert("Booking submitted successfully. We will contact you shortly.");
+form.reset();
+}, function(error){
+alert("Something went wrong. Please try again.");
+});
+});
+</script>
 
 </body>
 </html>
