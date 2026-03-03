@@ -1,179 +1,143 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Astro Vastu | Vijay Sawkar</title>
-
-<meta name="description" content="Professional Astrology & Vastu Consultation by Vijay Sawkar. Vedic astrology, vastu shastra and gemstone guidance.">
-<meta name="keywords" content="Astrologer, Vastu Consultant, Gemstone Expert">
-<meta name="author" content="Vijay Sawkar">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Astronomia | Astrology & Gemstones</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root{
+  --bg:#0a0a0f;
+  --card:#14141c;
+  --gold:#d4af37;
+  --text:#ffffff;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #ffffff;
-  color: #222;
-  line-height: 1.6;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
 }
 
-header {
-  text-align: center;
-  padding: 50px 20px;
-  background: #fafafa;
+body{
+  background:var(--bg);
+  color:var(--text);
 }
 
-header img {
-  width: 110px;
+header{
+  background:#000;
+  padding:20px 40px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 38px;
-  margin-top: 15px;
+header h1{
+  font-family:'Playfair Display',serif;
+  color:var(--gold);
 }
 
-header p {
-  color: #777;
-  margin-top: 5px;
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:white;
+  font-size:14px;
 }
 
-section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
-  text-align: center;
+nav a:hover{
+  color:var(--gold);
 }
 
-h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  margin-bottom: 40px;
+section{
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
 }
 
-.about p {
-  max-width: 700px;
-  margin: auto;
-  color: #555;
+.hero{
+  text-align:center;
+  padding-top:120px;
+  padding-bottom:120px;
 }
 
-.certificates {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+.hero h2{
+  font-size:42px;
+  font-family:'Playfair Display',serif;
+  color:var(--gold);
 }
 
-.certificates img {
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease;
+.hero p{
+  margin-top:20px;
+  font-size:18px;
+  opacity:0.8;
 }
 
-.certificates img:hover {
-  transform: translateY(-8px);
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:12px 30px;
+  background:var(--gold);
+  color:black;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:30px;
 }
 
-.gemstones {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
 }
 
-.card {
-  background: #fafafa;
-  padding: 30px;
-  width: 260px;
-  border-radius: 10px;
-  transition: 0.3s;
+.card{
+  background:var(--card);
+  padding:25px;
+  border-radius:12px;
+  text-align:center;
+  transition:0.3s;
 }
 
-.card:hover {
-  background: #f0f0f0;
+.card:hover{
+  transform:translateY(-5px);
 }
 
-.card h3 {
-  margin-bottom: 10px;
+.card h3{
+  color:var(--gold);
+  margin-bottom:10px;
 }
 
-form {
-  max-width: 500px;
-  margin: auto;
+.price{
+  margin:10px 0;
+  font-weight:600;
 }
 
-form input, form textarea {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 15px;
-  border-radius: 6px;
-  border: 1px solid #ddd;
-  font-family: inherit;
+.contact p{
+  margin:10px 0;
 }
 
-form button {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  background: #000;
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
-  transition: 0.3s;
+footer{
+  text-align:center;
+  padding:30px;
+  background:#000;
+  color:#aaa;
 }
 
-form button:hover {
-  background: #333;
-}
-
-.contact a {
-  color: #000;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #fafafa;
-  color: #777;
-}
-
-/* Floating Social */
-.social {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.social a {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #000;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  transition: 0.3s;
-}
-
-.social a:hover {
-  background: #444;
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px 18px;
+  border-radius:50%;
+  text-decoration:none;
+  font-size:20px;
 }
 </style>
 </head>
@@ -181,86 +145,62 @@ footer {
 <body>
 
 <header>
-  <img src="logo.jpg" alt="Astro Vastu Logo">
-  <h1>Astro Vastu</h1>
-  <p>By Vijay Sawkar</p>
+<h1>Astronomia</h1>
+<nav>
+<a href="#home">Home</a>
+<a href="#gemstones">Gemstones</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<section class="about">
-  <h2>About</h2>
-  <p>Providing professional Vedic astrology, vastu shastra consultation and authentic gemstone guidance for harmony, prosperity and life clarity.</p>
+<section class="hero" id="home">
+<h2>Premium Astrology & Genuine Gemstones</h2>
+<p>Transform your life with expert astrology guidance and certified gemstones.</p>
+<a class="btn" href="https://wa.me/919850454549" target="_blank">Book Consultation</a>
 </section>
 
-<section>
-  <h2>Certifications</h2>
-  <div class="certificates">
-    <img src="certificate1.jpg" alt="Certificate 1">
-    <img src="certificate2.jpg" alt="Certificate 2">
-  </div>
+<section id="gemstones">
+<h2 style="text-align:center;color:var(--gold);margin-bottom:40px;font-family:'Playfair Display',serif;">Our Gemstones (Price Per Ratti)</h2>
+
+<div class="cards">
+
+<div class="card"><h3>Ruby</h3><div class="price">₹1500 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Ruby">Buy Now</a></div>
+<div class="card"><h3>Pearl</h3><div class="price">₹500 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Pearl">Buy Now</a></div>
+<div class="card"><h3>Emerald</h3><div class="price">₹2500 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Emerald">Buy Now</a></div>
+<div class="card"><h3>Yellow Sapphire</h3><div class="price">₹1800 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Yellow%20Sapphire">Buy Now</a></div>
+<div class="card"><h3>Blue Sapphire</h3><div class="price">₹1800 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Blue%20Sapphire">Buy Now</a></div>
+<div class="card"><h3>Coral</h3><div class="price">₹1800 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Coral">Buy Now</a></div>
+<div class="card"><h3>Hessonite</h3><div class="price">₹1000 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Hessonite">Buy Now</a></div>
+<div class="card"><h3>Cat’s Eye</h3><div class="price">₹800 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Cat's%20Eye">Buy Now</a></div>
+<div class="card"><h3>Opal</h3><div class="price">₹2000 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Opal">Buy Now</a></div>
+<div class="card"><h3>Moonstone</h3><div class="price">₹1000 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Moonstone">Buy Now</a></div>
+<div class="card"><h3>Firoza</h3><div class="price">₹1000 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Firoza">Buy Now</a></div>
+<div class="card"><h3>Amethyst</h3><div class="price">₹800 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Amethyst">Buy Now</a></div>
+<div class="card"><h3>Garnet</h3><div class="price">₹1000 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Garnet">Buy Now</a></div>
+<div class="card"><h3>Topaz</h3><div class="price">₹1000 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Topaz">Buy Now</a></div>
+<div class="card"><h3>Citrine</h3><div class="price">₹1000 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Citrine">Buy Now</a></div>
+<div class="card"><h3>Lapis</h3><div class="price">₹800 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Lapis">Buy Now</a></div>
+<div class="card"><h3>Peridot</h3><div class="price">₹1000 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Peridot">Buy Now</a></div>
+<div class="card"><h3>Zircon</h3><div class="price">₹500 / ratti</div><a class="btn" href="https://wa.me/919850454549?text=I%20want%20Zircon">Buy Now</a></div>
+
+</div>
 </section>
 
-<section>
-  <h2>Gemstone Guidance</h2>
-  <div class="gemstones">
-    <div class="card">
-      <h3>Ruby</h3>
-      <p>Enhances leadership and Sun energy.</p>
-    </div>
-    <div class="card">
-      <h3>Yellow Sapphire</h3>
-      <p>Brings prosperity and Jupiter blessings.</p>
-    </div>
-    <div class="card">
-      <h3>Emerald</h3>
-      <p>Improves communication and intelligence.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Book Consultation</h2>
-  <form onsubmit="sendToWhatsApp(); return false;">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="tel" id="phone" placeholder="Your Phone" required>
-    <textarea id="message" placeholder="Your Message"></textarea>
-    <button type="submit">Book via WhatsApp</button>
-  </form>
-</section>
-
-<section class="contact">
-  <h2>Contact</h2>
-  <p>
-    <a href="https://maps.app.goo.gl/i32yhyBr9B47Sg9T7?g_st=aw" target="_blank">
-      View Office Location
-    </a>
-  </p>
-  <p>+91 9850454549</p>
+<section id="contact" class="contact">
+<h2 style="color:var(--gold);font-family:'Playfair Display',serif;">Contact</h2>
+<p>📞 +91 9850454549</p>
+<p>📧 <a href="mailto:sawkarv15@gmail.com" style="color:var(--gold);">sawkarv15@gmail.com</a></p>
+<p>
+<a href="https://www.instagram.com/sawkar.v" target="_blank" style="color:var(--gold);">Instagram</a> |
+<a href="https://www.facebook.com/" target="_blank" style="color:var(--gold);">Facebook</a>
+</p>
 </section>
 
 <footer>
-  © 2026 Astro Vastu – Vijay Sawkar
+© 2026 Astronomia. All Rights Reserved.
 </footer>
 
-<div class="social">
-  <a href="https://wa.me/919850454549" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  <a href="https://instagram.com/sawkar.v" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.facebook.com/search/top?q=Vijay%20Sawkar" target="_blank"><i class="fab fa-facebook-f"></i></a>
-</div>
-
-<script>
-function sendToWhatsApp() {
-  var name = document.getElementById("name").value;
-  var phone = document.getElementById("phone").value;
-  var message = document.getElementById("message").value;
-
-  var url = "https://wa.me/919850454549?text="
-    + "Name: " + name + "%0a"
-    + "Phone: " + phone + "%0a"
-    + "Message: " + message;
-
-  window.open(url, '_blank');
-}
-</script>
+<a class="whatsapp-float" href="https://wa.me/919850454549" target="_blank">💬</a>
 
 </body>
 </html>
