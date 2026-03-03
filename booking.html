@@ -50,6 +50,7 @@ font-weight:bold;
 border:none;
 border-radius:10px;
 cursor:pointer;
+font-size:16px;
 }
 </style>
 </head>
@@ -92,37 +93,30 @@ cursor:pointer;
 </form>
 </div>
 
-<!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
 <script>
-(function(){
-emailjs.init("vWUKW_m2GBVlS2yGo");
-})();
-
 document.getElementById("bookingForm").addEventListener("submit", function(e){
 e.preventDefault();
 
 var form = this;
 
-emailjs.send("service_698j2qc","template_bdfz1nc",{
-name: form.name.value,
-email: form.email.value,
-phone: form.phone.value,
-service: form.service.value,
-message:
+var message = 
+"*New Consultation Booking - Astronomia*\n\n" +
+"Name: " + form.name.value + "\n" +
+"Phone: " + form.phone.value + "\n" +
+"Email: " + form.email.value + "\n\n" +
 "Date of Birth: " + form.dob.value + "\n" +
 "Time of Birth: " + form.tob.value + "\n" +
 "Place of Birth: " + form.place.value + "\n\n" +
-"Concern:\n" + form.message.value
-})
-.then(function(){
-alert("Booking submitted successfully. We will contact you shortly.");
-form.reset();
-})
-.catch(function(error){
-alert("Error sending booking. Please try again.");
-});
+"Service: " + form.service.value + "\n\n" +
+"Concern: " + form.message.value;
+
+var whatsappNumber = "919850454549";
+
+var url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+
+window.open(url, "_blank");
+
+alert("Your booking details are ready to be sent on WhatsApp. Kindly press SEND to confirm your consultation.");
 });
 </script>
 
