@@ -3,37 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Astronomia by Vijay Sawkar | Astrologer & Vastu Consultant</title>
+<title>Astronomia by Vijay Sawkar</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 background:#000;
 color:white;
+scroll-behavior:smooth;
 }
+
+/* HEADER */
 
 header{
 text-align:center;
-padding:30px 20px;
+padding:50px 20px;
+animation:fadeDown 1.2s;
 }
 
 header img{
 width:130px;
 border-radius:12px;
-margin-bottom:10px;
+margin-bottom:15px;
 }
 
 h1{
-margin:5px 0;
+margin:0;
+font-size:28px;
 }
 
 .tagline{
 color:gold;
+margin-top:10px;
 font-size:15px;
 }
+
+/* SECTION */
 
 .container{
 max-width:1000px;
@@ -44,17 +51,27 @@ padding:20px;
 .section-title{
 text-align:center;
 color:gold;
-margin-top:40px;
+margin-top:50px;
 margin-bottom:25px;
-font-size:22px;
+font-size:24px;
+animation:fadeUp 1s;
 }
+
+/* CARD */
 
 .card{
 background:#111;
 border-radius:14px;
-padding:20px;
+padding:25px;
 margin-bottom:20px;
-border:1px solid #333;
+border:1px solid #222;
+transition:0.4s;
+animation:fadeUp 1.2s;
+}
+
+.card:hover{
+border:1px solid gold;
+transform:translateY(-5px);
 }
 
 .card h3{
@@ -64,19 +81,29 @@ margin-top:0;
 
 ul{
 padding-left:18px;
+line-height:1.7;
 }
+
+/* CERTIFICATES */
 
 .certificates{
 text-align:center;
-margin-top:30px;
 }
 
 .certificates img{
 width:120px;
-margin:10px;
+margin:12px;
 border-radius:10px;
 border:1px solid #333;
+transition:0.4s;
 }
+
+.certificates img:hover{
+transform:scale(1.08);
+border-color:gold;
+}
+
+/* SOCIAL BUTTONS */
 
 .social{
 text-align:center;
@@ -92,7 +119,14 @@ color:black;
 text-decoration:none;
 border-radius:8px;
 font-weight:bold;
+transition:0.3s;
 }
+
+.social a:hover{
+transform:scale(1.1);
+}
+
+/* GEM BUTTON */
 
 .gem-link{
 text-align:center;
@@ -101,19 +135,50 @@ margin-top:20px;
 
 .gem-link a{
 background:gold;
-padding:10px 18px;
+padding:12px 20px;
 color:black;
 text-decoration:none;
 border-radius:8px;
 font-weight:bold;
+transition:0.3s;
 }
 
+.gem-link a:hover{
+transform:scale(1.08);
+}
+
+/* FOOTER */
+
 footer{
-margin-top:40px;
+margin-top:60px;
 text-align:center;
 background:#111;
 padding:20px;
 font-size:14px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -123,7 +188,7 @@ font-size:14px;
 
 <header>
 
-<img src="logo.jpg" alt="Astronomia Logo">
+<img src="logo.jpg">
 
 <h1>Astronomia by Vijay Sawkar</h1>
 
@@ -134,14 +199,13 @@ Certified Gemstone Expert & Vastu Consultant in Margao, Goa<br>
 
 </header>
 
-
 <div class="container">
 
 <div class="section-title">About</div>
 
 <div class="card">
 
-Vijay Sawkar is a certified astrologer, vastu consultant and gemstone expert with over 25 years of professional experience. Through Astronomia, he provides trusted astrology guidance, vastu consultation and authentic gemstone recommendations to clients across Goa and all over India.
+Vijay Sawkar is a certified astrologer, vastu consultant and gemstone expert with more than 25 years of professional experience. Through Astronomia, he provides astrology guidance, vastu consultation and authentic gemstone recommendations to clients across Goa and all over India.
 
 </div>
 
@@ -155,12 +219,11 @@ Vijay Sawkar is a certified astrologer, vastu consultant and gemstone expert wit
 <ul>
 <li>New Kundali Preparation</li>
 <li>Detailed Horoscope Reading</li>
-<li>Marriage & Career Guidance</li>
-<li>Business Problem Solutions</li>
+<li>Marriage Guidance</li>
+<li>Career & Business Consultation</li>
 </ul>
 
 </div>
-
 
 <div class="card">
 
@@ -169,12 +232,11 @@ Vijay Sawkar is a certified astrologer, vastu consultant and gemstone expert wit
 <ul>
 <li>Home Vastu Visit</li>
 <li>Plot Vastu Analysis</li>
-<li>Industrial & Commercial Vastu</li>
+<li>Industrial Vastu</li>
 <li>Office & Shop Vastu Correction</li>
 </ul>
 
 </div>
-
 
 <div class="card">
 
@@ -182,7 +244,7 @@ Vijay Sawkar is a certified astrologer, vastu consultant and gemstone expert wit
 
 <ul>
 <li>Certified Natural Gemstones</li>
-<li>Personalized Gemstone Advice</li>
+<li>Personalised Gemstone Advice</li>
 <li>Correct Ratti Guidance</li>
 <li>All major gemstones available</li>
 </ul>
@@ -207,7 +269,7 @@ Vijay Sawkar is a certified astrologer, vastu consultant and gemstone expert wit
 </div>
 
 
-<div class="section-title">Connect With Us</div>
+<div class="section-title">Connect</div>
 
 <div class="social">
 
@@ -219,12 +281,11 @@ Vijay Sawkar is a certified astrologer, vastu consultant and gemstone expert wit
 
 </div>
 
-
 </div>
 
 <footer>
 
-© Astronomia by Vijay Sawkar | Margao Goa | Serving Clients All Over India
+Astronomia by Vijay Sawkar • Margao Goa • Serving Clients All Over India
 
 </footer>
 
