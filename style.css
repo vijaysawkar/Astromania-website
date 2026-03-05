@@ -1,149 +1,150 @@
-body {
+body{
 margin:0;
-font-family: 'Georgia', serif;
-background:#0b0b0f;
-color:white;
-overflow-x:hidden;
+font-family:Arial, Helvetica, sans-serif;
+background:#0b0b0b;
+color:#e5e5e5;
 }
 
-header {
-position:fixed;
-top:0;
-width:100%;
-background:rgba(10,10,15,0.95);
-backdrop-filter:blur(10px);
+/* HEADER */
+
+.header{
 display:flex;
-justify-content:space-between;
 align-items:center;
-padding:15px 8%;
-z-index:1000;
-border-bottom:1px solid rgba(212,175,55,0.15);
+gap:20px;
+padding:20px;
+border-bottom:1px solid #222;
 }
 
-.logo {
-font-size:22px;
+.logo{
+width:90px;
+border-radius:12px;
+}
+
+.site-title{
+font-size:26px;
 font-weight:bold;
-color:#d4af37;
-letter-spacing:2px;
+color:#f5f5f5;
 }
 
-nav a {
-color:#ccc;
-text-decoration:none;
-margin-left:25px;
+.tagline{
+color:#c9a227;
 font-size:14px;
-letter-spacing:1px;
-transition:0.3s;
 }
 
-nav a:hover {
-color:#d4af37;
-}
+/* HERO */
 
-.section {
-padding:120px 10% 80px 10%;
+.hero{
+padding:40px 20px;
 text-align:center;
 }
 
-.section h2 {
-font-size:32px;
-color:#d4af37;
-margin-bottom:20px;
-letter-spacing:2px;
+.hero h1{
+font-size:28px;
+color:#c9a227;
 }
 
-.subtitle {
-color:#aaa;
+.hero p{
 max-width:600px;
-margin:0 auto 50px auto;
-font-size:16px;
+margin:auto;
 line-height:1.6;
 }
 
-.grid {
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.card {
-background:linear-gradient(145deg,#111117,#0c0c12);
-padding:35px;
-border-radius:14px;
-border:1px solid rgba(212,175,55,0.15);
-transition:0.4s;
-position:relative;
-overflow:hidden;
-}
-
-.card:before {
-content:"";
-position:absolute;
-top:0;
-left:-100%;
-width:100%;
-height:100%;
-background:linear-gradient(120deg,transparent,rgba(212,175,55,0.1),transparent);
-transition:0.6s;
-}
-
-.card:hover:before {
-left:100%;
-}
-
-.card:hover {
-transform:translateY(-10px);
-box-shadow:0 15px 40px rgba(212,175,55,0.25);
-border:1px solid #d4af37;
-}
-
-.card h3 {
-color:#d4af37;
-margin-bottom:10px;
-letter-spacing:1px;
-}
-
-.button {
+.btn{
 display:inline-block;
-margin-top:40px;
-padding:14px 35px;
-background:#d4af37;
+margin-top:20px;
+padding:12px 24px;
+background:#c9a227;
 color:black;
+border-radius:8px;
 text-decoration:none;
-border-radius:30px;
 font-weight:bold;
-letter-spacing:1px;
-transition:0.3s;
 }
 
-.button:hover {
-background:white;
-color:black;
-transform:scale(1.05);
+/* SERVICES */
+
+.section{
+padding:40px 20px;
 }
 
-.footer {
-background:#0a0a0f;
-padding:40px 10%;
+.section-title{
 text-align:center;
-border-top:1px solid rgba(212,175,55,0.15);
-color:#888;
+font-size:24px;
+color:#c9a227;
+margin-bottom:25px;
 }
 
-.whatsapp-float {
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-color:white;
-font-size:22px;
-padding:15px;
-border-radius:50%;
-box-shadow:0 5px 20px rgba(0,0,0,0.4);
-z-index:999;
+.cards{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+max-width:700px;
+margin:auto;
+}
+
+.card{
+background:#141414;
+padding:25px;
+border-radius:12px;
+border:1px solid #2b2b2b;
 transition:0.3s;
 }
 
-.whatsapp-float:hover {
-transform:scale(1.1);
+.card:hover{
+transform:translateY(-5px);
+border-color:#c9a227;
+}
+
+/* CERTIFICATES */
+
+.certificates{
+display:flex;
+flex-direction:column;
+gap:20px;
+align-items:center;
+}
+
+.certificate{
+width:90%;
+max-width:400px;
+border-radius:10px;
+border:1px solid #333;
+}
+
+/* SOCIAL */
+
+.social{
+text-align:center;
+margin-top:40px;
+}
+
+.social a{
+margin:10px;
+padding:12px 22px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.whatsapp{background:#25D366;color:white;}
+.facebook{background:#1877F2;color:white;}
+.instagram{background:#E1306C;color:white;}
+
+/* GEMSTONE TABLE */
+
+.gem-table{
+width:90%;
+margin:auto;
+border-collapse:collapse;
+}
+
+.gem-table th{
+background:#1b1b1b;
+color:#c9a227;
+padding:12px;
+}
+
+.gem-table td{
+padding:10px;
+border-bottom:1px solid #333;
+text-align:center;
 }
