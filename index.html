@@ -5,102 +5,124 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Astronomia by Vijay Sawkar | Astrology • Vastu • Gemstone Guidance</title>
+<title>Astronomia by Vijay Sawkar</title>
 
-<meta name="description" content="Certified Gemstone Expert & Vastu Consultant in Margao Goa with 25+ years experience. Astrology consultation, vastu guidance and gemstone recommendation across India.">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
+margin:0;
+background:#0b0b0b;
 font-family:Poppins;
-background:#0a0a0a;
 color:white;
-line-height:1.6;
 }
 
-h1,h2,h3{
+/* HEADER */
+
+header{
+display:flex;
+align-items:center;
+padding:20px 60px;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+width:70px;
+margin-right:15px;
+}
+
+.brand{
 font-family:"Playfair Display";
-}
-
-section{
-padding:80px 10%;
-}
-
-.gold{
+font-size:26px;
 color:#d4af37;
+}
+
+.sub{
+font-size:14px;
+color:#aaa;
 }
 
 /* HERO */
 
 .hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 text-align:center;
-background:radial-gradient(circle,#111,#000);
-}
-
-.hero img{
-width:200px;
-margin-bottom:20px;
+padding:120px 20px;
 }
 
 .hero h1{
+font-family:"Playfair Display";
 font-size:48px;
+color:#d4af37;
 margin-bottom:10px;
 }
 
-.hero p{
-font-size:18px;
+.hero h2{
+font-weight:400;
+color:#f0c96a;
+}
+
+.experience{
+color:#aaa;
+margin-top:8px;
+}
+
+.services-line{
+margin-top:30px;
+font-size:22px;
+color:#e0b75c;
+}
+
+.desc{
 max-width:700px;
+margin:auto;
+margin-top:15px;
+color:#ccc;
 }
 
-.cta{
-margin-top:25px;
+.btn{
 display:inline-block;
-padding:12px 30px;
-background:#d4af37;
+margin-top:35px;
+padding:14px 32px;
+background:linear-gradient(135deg,#caa437,#f0d47a);
 color:black;
-border-radius:30px;
 font-weight:600;
+border-radius:30px;
 text-decoration:none;
-transition:.3s;
+transition:0.3s;
 }
 
-.cta:hover{
-transform:scale(1.05);
+.btn:hover{
+transform:scale(1.08);
 }
 
 /* SERVICES */
 
 .services{
-background:#000;
+padding:100px 20px;
 text-align:center;
 }
 
-.service-grid{
-margin-top:50px;
+.services h2{
+font-family:"Playfair Display";
+color:#d4af37;
+margin-bottom:50px;
+}
+
+.cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
+max-width:1000px;
+margin:auto;
 }
 
 .card{
-background:#111;
-padding:35px;
-border-radius:10px;
-border:1px solid #222;
-transition:.4s;
+background:#141414;
+padding:30px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,0.08);
+transition:0.4s;
 }
 
 .card:hover{
@@ -109,58 +131,74 @@ border-color:#d4af37;
 }
 
 .card h3{
-margin-bottom:10px;
-color:#d4af37;
+color:#e0b75c;
 }
 
-/* ABOUT */
+.card p{
+color:#aaa;
+}
 
-.about{
+/* GEMSTONE BUTTON */
+
+.gemstone{
 text-align:center;
-background:#0a0a0a;
+padding:80px 20px;
 }
 
-.about p{
-max-width:800px;
-margin:auto;
+.gemstone a{
+padding:15px 35px;
+background:#d4af37;
+color:black;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
 }
 
 /* CERTIFICATE */
 
-.certificate{
-background:#000;
+.certificates{
+padding:100px 20px;
 text-align:center;
 }
 
-.certificate img{
-margin-top:40px;
-max-width:500px;
-width:100%;
-border-radius:10px;
-box-shadow:0 0 30px rgba(212,175,55,0.3);
+.certificates h2{
+color:#d4af37;
+font-family:"Playfair Display";
+margin-bottom:40px;
 }
 
-/* BUTTONS */
+.cert-grid{
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.cert-grid img{
+width:320px;
+border-radius:12px;
+border:2px solid #d4af37;
+transition:0.3s;
+}
+
+.cert-grid img:hover{
+transform:scale(1.05);
+}
+
+/* SOCIAL */
 
 .social{
-position:fixed;
-right:20px;
-bottom:20px;
-display:flex;
-flex-direction:column;
-gap:15px;
+text-align:center;
+padding:60px;
 }
 
 .social a{
-width:50px;
-height:50px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-color:white;
-font-size:20px;
+margin:10px;
+padding:12px 25px;
+border-radius:25px;
 text-decoration:none;
+color:white;
+font-weight:500;
 }
 
 .whatsapp{background:#25D366;}
@@ -170,75 +208,70 @@ text-decoration:none;
 footer{
 text-align:center;
 padding:30px;
-background:#000;
-font-size:14px;
+color:#777;
+border-top:1px solid rgba(255,255,255,0.08);
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- HERO -->
+<header>
+
+<img src="logo.png" class="logo">
+
+<div>
+<div class="brand">Astronomia by Vijay Sawkar</div>
+<div class="sub">Certified Gemstone Expert & Vastu Consultant</div>
+</div>
+
+</header>
 
 <section class="hero">
 
-<img src="logo.png">
+<h1>Astronomia by Vijay Sawkar</h1>
 
-<h1>Astronomia by <span class="gold">Vijay Sawkar</span></h1>
+<h2>Astrology • Vastu • Gemstone Guidance</h2>
 
-<p>
-Certified Gemstone Expert & Vastu Consultant in Margao, Goa  
-<br>
+<p class="experience">
 25+ Years Experience | Lakhs of Satisfied Clients
 </p>
 
-<a class="cta" href="gemstone.html">Explore Gemstones</a>
-
-</section>
-
-<!-- ABOUT -->
-
-<section class="about">
-
-<h2 class="gold">Astrology • Vastu • Gemstone Guidance</h2>
-
-<br>
-
-<p>
-Professional astrology consultation, vastu guidance for homes, plots, shops and industries, and accurate gemstone recommendation based on horoscope analysis.  
-Services available across India and also for international clients.
+<p class="desc">
+Professional astrology consultation, vastu guidance for homes, plots and industries,
+and accurate gemstone recommendation based on horoscope analysis.
+Services available across India and for international clients.
 </p>
 
+<a href="#services" class="btn">Book Consultation</a>
+
 </section>
 
-<!-- SERVICES -->
+<section class="services" id="services">
 
-<section class="services">
+<h2>Our Services</h2>
 
-<h2 class="gold">Our Services</h2>
-
-<div class="service-grid">
+<div class="cards">
 
 <div class="card">
 <h3>Astrology Consultation</h3>
 <p>
-Detailed horoscope reading, kundali creation and life guidance using traditional Vedic astrology principles.
+Detailed horoscope analysis, kundali creation and life guidance using traditional Vedic astrology.
 </p>
 </div>
 
 <div class="card">
 <h3>Vastu Consultation</h3>
 <p>
-Vastu guidance for homes, plots, shops and industries to improve energy balance and prosperity.
+Vastu guidance for homes, plots, shops and industries for better energy balance and prosperity.
 </p>
 </div>
 
 <div class="card">
 <h3>Gemstone Recommendation</h3>
 <p>
-Accurate gemstone suggestions based on birth chart analysis to strengthen planetary influence.
+Accurate gemstone suggestions based on birth chart analysis to support planetary balance.
 </p>
 </div>
 
@@ -246,35 +279,44 @@ Accurate gemstone suggestions based on birth chart analysis to strengthen planet
 
 </section>
 
-<!-- CERTIFICATE -->
+<section class="gemstone">
 
-<section class="certificate">
+<h2 style="color:#d4af37;font-family:Playfair Display;">Explore Gemstones</h2>
 
-<h2 class="gold">Certified Professional</h2>
+<br>
 
-<img src="certificate.jpg">
+<a href="gemstones.html">View Gemstones</a>
+
+</section>
+
+<section class="certificates">
+
+<h2>Certified Professional</h2>
+
+<div class="cert-grid">
+
+<img src="certificate1.jpg">
+<img src="certificate2.jpg">
+
+</div>
+
+</section>
+
+<section class="social">
+
+<a href="https://wa.me/91YOURNUMBER" class="whatsapp">WhatsApp</a>
+
+<a href="https://facebook.com/YOURPAGE" class="facebook">Facebook</a>
+
+<a href="https://instagram.com/YOURPAGE" class="instagram">Instagram</a>
 
 </section>
 
 <footer>
 
-Sawkar Gems & Jewels • Margao Goa  
-<br>
-Astronomia by Vijay Sawkar © 2026
+© 2026 Astronomia by Vijay Sawkar
 
 </footer>
-
-<!-- SOCIAL BUTTONS -->
-
-<div class="social">
-
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">W</a>
-
-<a class="facebook" href="https://facebook.com/sawkar.v">f</a>
-
-<a class="instagram" href="https://instagram.com/sawkar.v">I</a>
-
-</div>
 
 </body>
 </html>
