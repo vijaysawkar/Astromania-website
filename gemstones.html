@@ -1,224 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Natural Gemstones | Astronomia by Vijay Sawkar</title>
+<title>Gemstones | Astronomia</title>
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
 body{
-background:#0b0b0b;
-color:white;
-font-family: 'Segoe UI',sans-serif;
 margin:0;
-}
-
-.header{
-text-align:center;
-padding:60px 20px;
-}
-
-.header h1{
-font-size:42px;
-color:#d4af37;
-margin-bottom:10px;
-}
-
-.header p{
-color:#cfcfcf;
-font-size:16px;
-max-width:700px;
-margin:auto;
-}
-
-.gem-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-padding:60px 10%;
-}
-
-.gem-card{
-background:#111;
-padding:30px;
-border-radius:12px;
-text-align:center;
-border:1px solid rgba(212,175,55,0.25);
-transition:0.4s;
-}
-
-.gem-card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 25px rgba(212,175,55,0.3);
-border:1px solid #d4af37;
-}
-
-.gem-name{
-font-size:22px;
-color:#d4af37;
-margin-bottom:10px;
-}
-
-.gem-price{
-font-size:18px;
+background:#070707;
+font-family:Poppins;
 color:white;
-}
-
-.note{
-text-align:center;
-padding:50px 20px;
-color:#cfcfcf;
-font-size:15px;
-max-width:700px;
-margin:auto;
 }
 
 .navbar{
-background:#000;
-padding:18px;
-text-align:center;
-border-bottom:1px solid #222;
+display:flex;
+justify-content:space-between;
+padding:20px 8%;
+border-bottom:1px solid rgba(255,215,0,.15);
 }
 
-.navbar a{
-color:white;
+.logo{
+font-family:Playfair Display;
+font-size:24px;
+color:#D4AF37;
+}
+
+.menu{
+display:flex;
+gap:25px;
+}
+
+.menu a{
 text-decoration:none;
-margin:0 20px;
-font-size:15px;
+color:white;
 }
 
-.navbar a:hover{
-color:#d4af37;
+.menu a:hover{
+color:#D4AF37;
+}
+
+.section{
+padding:100px 8%;
+max-width:1000px;
+margin:auto;
+}
+
+h1{
+font-family:Playfair Display;
+font-size:40px;
+margin-bottom:40px;
+}
+
+.gem{
+display:flex;
+justify-content:space-between;
+padding:20px 0;
+border-bottom:1px solid rgba(255,215,0,.15);
+}
+
+.gem span{
+color:#D4AF37;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <div class="navbar">
+<div class="logo">Astronomia</div>
+
+<div class="menu">
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
 <a href="gemstones.html">Gemstones</a>
+<a href="book.html">Book</a>
 <a href="contact.html">Contact</a>
 </div>
+</div>
 
-
-<div class="header">
+<div class="section">
 
 <h1>Natural Certified Gemstones</h1>
 
-<p>
-All gemstones available are natural and certified.  
-Prices mentioned below are starting prices per ratti.
-</p>
+<div class="gem">Ruby <span>Price per ratti onwards</span></div>
+<div class="gem">Pearl <span>Price per ratti onwards</span></div>
+<div class="gem">Red Coral <span>Price per ratti onwards</span></div>
+<div class="gem">Emerald <span>Price per ratti onwards</span></div>
+<div class="gem">Yellow Sapphire <span>Price per ratti onwards</span></div>
+<div class="gem">Diamond <span>Price per ratti onwards</span></div>
+<div class="gem">Blue Sapphire <span>Price per ratti onwards</span></div>
+<div class="gem">Hessonite <span>Price per ratti onwards</span></div>
+<div class="gem">Cat's Eye <span>Price per ratti onwards</span></div>
 
-</div>
-
-
-<div class="gem-container">
-
-<div class="gem-card">
-<div class="gem-name">Ruby (Manik)</div>
-<div class="gem-price">₹1500 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Pearl (Moti)</div>
-<div class="gem-price">₹500 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Emerald (Panna)</div>
-<div class="gem-price">₹2500 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Yellow Sapphire (Pukhraj)</div>
-<div class="gem-price">₹1800 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Blue Sapphire (Neelam)</div>
-<div class="gem-price">₹1800 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Red Coral (Moonga)</div>
-<div class="gem-price">₹1800 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Hessonite (Gomed)</div>
-<div class="gem-price">₹1000 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Cat's Eye (Lehsunia)</div>
-<div class="gem-price">₹800 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Opal</div>
-<div class="gem-price">₹2000 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Moonstone</div>
-<div class="gem-price">₹1000 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Turquoise (Firoza)</div>
-<div class="gem-price">₹1000 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Amethyst</div>
-<div class="gem-price">₹800 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Garnet</div>
-<div class="gem-price">₹1000 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Topaz</div>
-<div class="gem-price">₹1000 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Citrine</div>
-<div class="gem-price">₹1000 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Lapis Lazuli</div>
-<div class="gem-price">₹800 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Peridot</div>
-<div class="gem-price">₹1000 per ratti onwards</div>
-</div>
-
-<div class="gem-card">
-<div class="gem-name">Zircon</div>
-<div class="gem-price">₹500 per ratti onwards</div>
-</div>
-
-</div>
-
-
-<div class="note">
-Prices mentioned are starting prices.  
-Final price may vary depending on gemstone quality, origin and clarity.
 </div>
 
 </body>
