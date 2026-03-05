@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Astronomia by Vijay Sawkar</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<title>Astronomia by Vijay Sawkar | Astrology Vastu Gemstone Expert</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Poppins;
-background:#0b0b0b;
+font-family:Arial, Helvetica, sans-serif;
+background:#000;
 color:white;
 }
 
-/* HEADER */
+/* NAVBAR */
 
-header{
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#000;
+border-bottom:1px solid rgba(212,175,55,0.3);
+position:sticky;
+top:0;
+}
+
+.logo{
 display:flex;
 align-items:center;
-padding:20px;
-gap:15px;
-border-bottom:1px solid rgba(255,255,255,0.1);
+gap:10px;
+font-weight:bold;
+font-size:18px;
+color:#d4af37;
 }
 
-header img{
-width:60px;
+.logo img{
+width:40px;
 }
 
-.brand{
-font-family:"Playfair Display";
-font-size:24px;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:15px;
+}
+
+nav a:hover{
 color:#d4af37;
 }
 
@@ -46,103 +60,69 @@ padding:80px 20px;
 }
 
 .hero h1{
-font-family:"Playfair Display";
-font-size:42px;
+font-size:40px;
 color:#d4af37;
+margin-bottom:10px;
 }
 
 .hero h2{
-font-weight:400;
-margin-top:10px;
-color:#e8c96a;
+font-size:20px;
+font-weight:normal;
+margin-bottom:20px;
 }
 
 .hero p{
 max-width:700px;
 margin:auto;
-margin-top:20px;
-color:#cccccc;
 line-height:1.6;
+color:#ccc;
 }
 
-.btn{
+.button{
 display:inline-block;
 margin-top:25px;
-padding:14px 30px;
+padding:12px 28px;
 background:#d4af37;
 color:black;
 text-decoration:none;
-border-radius:30px;
-font-weight:600;
+font-weight:bold;
+border-radius:5px;
 }
 
 /* SERVICES */
 
-.services{
-padding:60px 20px;
+.section{
+padding:70px 8%;
+text-align:center;
 }
 
-.sectionTitle{
-text-align:center;
-font-family:"Playfair Display";
+.section h2{
 color:#d4af37;
-font-size:32px;
 margin-bottom:40px;
 }
 
-.card{
-background:#151515;
-padding:25px;
-margin-bottom:20px;
-border-radius:10px;
-border:1px solid rgba(255,255,255,0.08);
-}
-
-.card h3{
-color:#e6c56c;
-margin-bottom:8px;
-}
-
-.card p{
-color:#cfcfcf;
-}
-
-/* GEMSTONE */
-
-.gem{
-text-align:center;
-padding:70px 20px;
+.service-box{
 background:#111;
+padding:25px;
+margin:20px auto;
+max-width:600px;
+border-radius:8px;
+border:1px solid rgba(212,175,55,0.2);
 }
 
-.gem h2{
-font-family:"Playfair Display";
-color:#d4af37;
-}
-
-.gem a{
-margin-top:20px;
-display:inline-block;
-padding:15px 35px;
-background:#d4af37;
-color:black;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-}
-
-/* CERTIFICATES */
+/* CERTIFICATE */
 
 .certificates{
-padding:70px 20px;
-text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:30px;
 }
 
 .certificates img{
-width:90%;
-max-width:500px;
-margin:20px 0;
+width:320px;
 border-radius:8px;
+border:2px solid #d4af37;
 }
 
 /* SOCIAL */
@@ -154,28 +134,44 @@ padding:40px;
 
 .social a{
 margin:10px;
-padding:12px 20px;
-border-radius:25px;
-color:white;
+padding:10px 20px;
+border-radius:6px;
 text-decoration:none;
+color:white;
+font-size:14px;
 }
 
 .whatsapp{background:#25D366;}
 .facebook{background:#1877F2;}
-.instagram{background:#E1306C;}
+.instagram{background:#E4405F;}
+
+footer{
+text-align:center;
+padding:25px;
+border-top:1px solid rgba(212,175,55,0.3);
+color:#aaa;
+font-size:14px;
+}
 
 </style>
 </head>
 
 <body>
 
-<header>
+<header class="navbar">
 
-<img src="Screenshot_20260226_164340.jpg">
-
-<div class="brand">
-Astronomia by Vijay Sawkar
+<div class="logo">
+<img src="logo.png">
+Astronomia
 </div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="gemstones.html">Gemstones</a>
+<a href="booking.html">Book</a>
+<a href="contact.html">Contact</a>
+</nav>
 
 </header>
 
@@ -184,34 +180,33 @@ Astronomia by Vijay Sawkar
 
 <h1>Astronomia by Vijay Sawkar</h1>
 
-<h2>Astrology • Vastu • Gemstone Guidance</h2>
+<h2>Certified Gemstone Expert & Vastu Consultant</h2>
 
 <p>
-Certified Gemstone Expert & Vastu Consultant in Margao, Goa.  
-25+ Years Experience | Lakhs of Satisfied Clients.  
+25+ Years Experience | Lakhs of Satisfied Clients  
 Professional astrology consultation, vastu guidance for homes, plots and industries, and accurate gemstone recommendation based on horoscope analysis. Services available across India and for international clients.
 </p>
 
-<a class="btn" href="booking.html">Book Consultation</a>
+<a class="button" href="booking.html">Book Consultation</a>
 
 </section>
 
 
-<section class="services">
+<section class="section">
 
-<div class="sectionTitle">Our Services</div>
+<h2>Our Services</h2>
 
-<div class="card">
+<div class="service-box">
 <h3>Astrology Consultation</h3>
 <p>Detailed horoscope analysis, kundali creation and life guidance using traditional Vedic astrology.</p>
 </div>
 
-<div class="card">
+<div class="service-box">
 <h3>Vastu Consultation</h3>
-<p>Vastu guidance for homes, plots, shops and industries to improve energy balance and prosperity.</p>
+<p>Vastu guidance for homes, plots, shops and industries for better energy balance and prosperity.</p>
 </div>
 
-<div class="card">
+<div class="service-box">
 <h3>Gemstone Recommendation</h3>
 <p>Accurate gemstone suggestions based on birth chart analysis to support planetary balance.</p>
 </div>
@@ -219,37 +214,37 @@ Professional astrology consultation, vastu guidance for homes, plots and industr
 </section>
 
 
-<section class="gem">
+<section class="section">
 
-<h2>Natural Certified Gemstones</h2>
+<h2>Certified Professional</h2>
 
-<p>Ruby, Emerald, Yellow Sapphire, Blue Sapphire and many more gemstones available.</p>
+<div class="certificates">
 
-<a href="gemstones.html">View Gemstones</a>
+<img src="certificate1.jpg">
 
-</section>
-
-
-<section class="certificates">
-
-<div class="sectionTitle">Certified Professional</div>
-
-<img src="Screenshot_20260227_202459.jpg">
-
-<img src="Screenshot_20260227_202511.jpg">
-
-</section>
-
-
-<div class="social">
-
-<a class="whatsapp" href="#">WhatsApp</a>
-
-<a class="facebook" href="#">Facebook</a>
-
-<a class="instagram" href="#">Instagram</a>
+<img src="certificate2.jpg">
 
 </div>
+
+</section>
+
+
+<section class="social">
+
+<a class="whatsapp" href="#">WhatsApp</a>
+<a class="facebook" href="#">Facebook</a>
+<a class="instagram" href="#">Instagram</a>
+
+</section>
+
+
+<footer>
+
+© Astronomia by Vijay Sawkar  
+Astrology • Vastu • Gemstone Guidance
+
+</footer>
+
 
 </body>
 </html>
