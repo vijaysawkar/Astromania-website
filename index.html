@@ -1,293 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Astronomia by Vijay Sawkar</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#000;
-color:white;
-scroll-behavior:smooth;
-}
-
-/* HEADER */
-
-header{
-text-align:center;
-padding:50px 20px;
-animation:fadeDown 1.2s;
-}
-
-header img{
-width:130px;
-border-radius:12px;
-margin-bottom:15px;
-}
-
-h1{
-margin:0;
-font-size:28px;
-}
-
-.tagline{
-color:gold;
-margin-top:10px;
-font-size:15px;
-}
-
-/* SECTION */
-
-.container{
-max-width:1000px;
-margin:auto;
-padding:20px;
-}
-
-.section-title{
-text-align:center;
-color:gold;
-margin-top:50px;
-margin-bottom:25px;
-font-size:24px;
-animation:fadeUp 1s;
-}
-
-/* CARD */
-
-.card{
-background:#111;
-border-radius:14px;
-padding:25px;
-margin-bottom:20px;
-border:1px solid #222;
-transition:0.4s;
-animation:fadeUp 1.2s;
-}
-
-.card:hover{
-border:1px solid gold;
-transform:translateY(-5px);
-}
-
-.card h3{
-color:gold;
-margin-top:0;
-}
-
-ul{
-padding-left:18px;
-line-height:1.7;
-}
-
-/* CERTIFICATES */
-
-.certificates{
-text-align:center;
-}
-
-.certificates img{
-width:120px;
-margin:12px;
-border-radius:10px;
-border:1px solid #333;
-transition:0.4s;
-}
-
-.certificates img:hover{
-transform:scale(1.08);
-border-color:gold;
-}
-
-/* SOCIAL BUTTONS */
-
-.social{
-text-align:center;
-margin-top:40px;
-}
-
-.social a{
-display:inline-block;
-margin:8px;
-padding:10px 18px;
-background:gold;
-color:black;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-transition:0.3s;
-}
-
-.social a:hover{
-transform:scale(1.1);
-}
-
-/* GEM BUTTON */
-
-.gem-link{
-text-align:center;
-margin-top:20px;
-}
-
-.gem-link a{
-background:gold;
-padding:12px 20px;
-color:black;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-transition:0.3s;
-}
-
-.gem-link a:hover{
-transform:scale(1.08);
-}
-
-/* FOOTER */
-
-footer{
-margin-top:60px;
-text-align:center;
-background:#111;
-padding:20px;
-font-size:14px;
-}
-
-/* ANIMATIONS */
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes fadeDown{
-from{
-opacity:0;
-transform:translateY(-40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<div class="header">
 
-<img src="logo.jpg">
+<img src="Screenshot_20260226_164340.jpg" class="logo">
 
-<h1>Astronomia by Vijay Sawkar</h1>
-
+<div>
+<div class="site-title">Astronomia by Vijay Sawkar</div>
 <div class="tagline">
-Certified Gemstone Expert & Vastu Consultant in Margao, Goa<br>
+Certified Gemstone Expert & Vastu Consultant<br>
 25+ Years Experience | Lakhs of Satisfied Clients
 </div>
-
-</header>
-
-<div class="container">
-
-<div class="section-title">About</div>
-
-<div class="card">
-
-Vijay Sawkar is a certified astrologer, vastu consultant and gemstone expert with more than 25 years of professional experience. Through Astronomia, he provides astrology guidance, vastu consultation and authentic gemstone recommendations to clients across Goa and all over India.
+</div>
 
 </div>
 
 
-<div class="section-title">Services</div>
+<div class="hero">
+
+<h1>Astrology • Vastu • Gemstone Guidance</h1>
+
+<p>
+Professional astrology consultation, vastu guidance for homes, plots and industries,
+and accurate gemstone recommendation based on horoscope analysis.
+Services available across India and for international clients.
+</p>
+
+<a href="booking.html" class="btn">Book Consultation</a>
+
+</div>
+
+
+
+<div class="section">
+
+<div class="section-title">Our Services</div>
+
+<div class="cards">
 
 <div class="card">
-
 <h3>Astrology Consultation</h3>
-
-<ul>
-<li>New Kundali Preparation</li>
-<li>Detailed Horoscope Reading</li>
-<li>Marriage Guidance</li>
-<li>Career & Business Consultation</li>
-</ul>
-
+<p>
+Detailed horoscope analysis, kundali creation and life guidance using traditional Vedic astrology.
+</p>
 </div>
 
 <div class="card">
-
 <h3>Vastu Consultation</h3>
-
-<ul>
-<li>Home Vastu Visit</li>
-<li>Plot Vastu Analysis</li>
-<li>Industrial Vastu</li>
-<li>Office & Shop Vastu Correction</li>
-</ul>
-
+<p>
+Vastu guidance for homes, plots, shops and industries for better energy balance and prosperity.
+</p>
 </div>
 
 <div class="card">
-
 <h3>Gemstone Recommendation</h3>
-
-<ul>
-<li>Certified Natural Gemstones</li>
-<li>Personalised Gemstone Advice</li>
-<li>Correct Ratti Guidance</li>
-<li>All major gemstones available</li>
-</ul>
-
-<div class="gem-link">
-
-<a href="gemstones.html">View Gemstone List</a>
+<p>
+Accurate gemstone suggestions based on birth chart analysis to support planetary balance.
+</p>
+</div>
 
 </div>
 
 </div>
 
 
-<div class="section-title">Certificates</div>
+
+<div class="section">
+
+<div class="section-title">Certified Professional</div>
 
 <div class="certificates">
 
-<img src="certificate1.jpg">
-<img src="certificate2.jpg">
-<img src="certificate3.jpg">
+<img src="Screenshot_20260227_202459.jpg" class="certificate">
+
+<img src="Screenshot_20260227_202511.jpg" class="certificate">
+
+</div>
 
 </div>
 
 
-<div class="section-title">Connect</div>
 
 <div class="social">
 
-<a href="https://wa.me/919850454549">WhatsApp</a>
+<a href="https://wa.me/YOURNUMBER" class="whatsapp">WhatsApp</a>
 
-<a href="https://www.facebook.com/profile.php?id=61553671695416">Facebook</a>
+<a href="https://facebook.com/YOURPAGE" class="facebook">Facebook</a>
 
-<a href="https://www.instagram.com/sawkar.v">Instagram</a>
-
-</div>
+<a href="https://instagram.com/YOURPAGE" class="instagram">Instagram</a>
 
 </div>
 
-<footer>
-
-Astronomia by Vijay Sawkar • Margao Goa • Serving Clients All Over India
-
-</footer>
 
 </body>
 </html>
