@@ -1,157 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Gemstones | Astronomia</title>
-
-<style>
-
-body{
-margin:0;
-font-family:Arial;
-background:#000;
-color:white;
-}
-
-header{
-text-align:center;
-padding:50px 20px;
-animation:fadeDown 1s;
-}
-
-h1{
-color:gold;
-}
-
-.container{
-max-width:800px;
-margin:auto;
-padding:20px;
-}
-
-.gem{
-background:#111;
-padding:18px;
-border-radius:12px;
-margin-bottom:14px;
-border:1px solid #222;
-display:flex;
-justify-content:space-between;
-transition:0.3s;
-animation:fadeUp 1s;
-}
-
-.gem:hover{
-border-color:gold;
-transform:translateX(6px);
-}
-
-.gem-name{
-color:gold;
-font-weight:bold;
-}
-
-.price{
-color:#ccc;
-}
-
-.back{
-text-align:center;
-margin-top:40px;
-}
-
-.back a{
-background:gold;
-padding:12px 20px;
-color:black;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-}
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes fadeDown{
-from{
-opacity:0;
-transform:translateY(-40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<div class="header">
 
-<h1>Available Gemstones</h1>
-<p>Certified Natural Stones</p>
+<img src="Screenshot_20260226_164340.jpg" class="logo">
 
-</header>
-
-<div class="container">
-
-<div class="gem">
-<span class="gem-name">Ruby (Manik)</span>
-<span class="price">As Per Quality (Per Ratti Onwards)</span>
+<div>
+<div class="site-title">Gemstone Collection</div>
+<div class="tagline">Natural Certified Gemstones</div>
 </div>
 
-<div class="gem">
-<span class="gem-name">Emerald (Panna)</span>
-<span class="price">As Per Quality (Per Ratti Onwards)</span>
 </div>
 
-<div class="gem">
-<span class="gem-name">Yellow Sapphire (Pukhraj)</span>
-<span class="price">As Per Quality (Per Ratti Onwards)</span>
-</div>
 
-<div class="gem">
-<span class="gem-name">Blue Sapphire (Neelam)</span>
-<span class="price">As Per Quality (Per Ratti Onwards)</span>
-</div>
+<div class="section">
 
-<div class="gem">
-<span class="gem-name">Red Coral (Moonga)</span>
-<span class="price">As Per Quality (Per Ratti Onwards)</span>
-</div>
+<div class="section-title">Available Gemstones</div>
 
-<div class="gem">
-<span class="gem-name">Pearl (Moti)</span>
-<span class="price">As Per Quality (Per Ratti Onwards)</span>
-</div>
+<table class="gem-table">
 
-<div class="gem">
-<span class="gem-name">Gomed (Hessonite)</span>
-<span class="price">As Per Quality (Per Ratti Onwards)</span>
-</div>
+<tr>
+<th>Gemstone</th>
+<th>Price</th>
+</tr>
 
-<div class="gem">
-<span class="gem-name">Cat’s Eye (Lehsuniya)</span>
-<span class="price">As Per Quality (Per Ratti Onwards)</span>
-</div>
+<tr><td>Ruby</td><td>₹1500+ / ratti (per quality)</td></tr>
+<tr><td>Pearl</td><td>₹500+ / ratti</td></tr>
+<tr><td>Emerald</td><td>₹2500+ / ratti</td></tr>
+<tr><td>Yellow Sapphire</td><td>₹1800+ / ratti</td></tr>
+<tr><td>Blue Sapphire</td><td>₹1800+ / ratti</td></tr>
+<tr><td>Coral</td><td>₹1800+ / ratti</td></tr>
+<tr><td>Hessonite</td><td>₹1000+ / ratti</td></tr>
+<tr><td>Cat's Eye</td><td>₹800+ / ratti</td></tr>
+<tr><td>Opal</td><td>₹2000+ / ratti</td></tr>
+<tr><td>Moonstone</td><td>₹1000+ / ratti</td></tr>
+<tr><td>Firoza</td><td>₹1000+ / ratti</td></tr>
+<tr><td>Amethyst</td><td>₹800+ / ratti</td></tr>
+<tr><td>Garnet</td><td>₹1000+ / ratti</td></tr>
+<tr><td>Topaz</td><td>₹1000+ / ratti</td></tr>
+<tr><td>Citrine</td><td>₹1000+ / ratti</td></tr>
+<tr><td>Lapis</td><td>₹800+ / ratti</td></tr>
+<tr><td>Peridot</td><td>₹1000+ / ratti</td></tr>
+<tr><td>Zircon</td><td>₹500+ / ratti</td></tr>
 
-<div class="back">
-<a href="index.html">Back to Home</a>
-</div>
+</table>
 
 </div>
 
